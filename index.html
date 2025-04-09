@@ -1,0 +1,330 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAweome CDN Link for Icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0%;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: "arial", heletica, sans-serif;
+        font-size: 12px;
+        background: #2c42f3 url('https://static.tumblr.com/03fbbc566b081016810402488936fbae/pqpk3dn/MRSmlzpj3/tumblr_static_bg3.png') repeat 0 0;
+        -webkit-animation: 10s linear 0s normal none infinite animate;
+        -moz-animation: 10s linear 0s normal none infinite animate;
+        -ms-animation: 10s linear 0s normal none infinite animate;
+        -o-animation: 10s linear 0s normal none infinite animate;
+        animation: 10s linear 0s normal none infinite animate;
+
+    }
+
+    @-webkit-keyframes animate {
+        from {
+            background-position: 0 0;
+        }
+
+        to {
+            background-position: 500px 0;
+        }
+    }
+
+    @-moz-keyframes animate {
+        from {
+            background-position: 0 0;
+        }
+
+        to {
+            background-position: 500px 0;
+        }
+    }
+
+    @-ms-keyframes animate {
+        from {
+            background-position: 0 0;
+        }
+
+        to {
+            background-position: 500px 0;
+        }
+    }
+
+    @-o-keyframes animate {
+        from {
+            background-position: 0 0;
+        }
+
+        to {
+            background-position: 500px 0;
+        }
+    }
+
+    @keyframes animate {
+        from {
+            background-position: 0 0;
+        }
+
+        to {
+            background-position: 500px 0;
+        }
+    }
+
+    header {
+        /* position: fixed; */
+        top: 0;
+        
+        width: 100%;
+        height: 100px;
+        backdrop-filter: blur(15px);
+        background: rgba(0, 0, 0, 0.5);
+        padding: 60px;
+        display: flex;
+        justify-content: space-between;
+        /* Adjusted to place logo and text properly */
+        align-items: center;
+        color: white;
+        font-size: 35px;
+        font-weight: bold;
+        text-transform: uppercase;
+        animation: fadeIn 1s ease-in-out;
+    }
+
+    .logo,
+    .logo1 {
+        margin: 10px 30px;
+        cursor: pointer;
+        width: 80px;
+        height: 80px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 25%;
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+
+    /* Apply different background images */
+    .logo {
+        background-image: url('https://play-lh.googleusercontent.com/27c9TIrOfA3hFpT_IBnm1V-RtKn3mD2GJiVmuXSQ-FWTFePmqxxZQHj_ahwvHOgrsUM');
+    }
+
+    .logo1 {
+        background-image: url('https://thumbs.dreamstime.com/b/n-circle-letter-lines-logo-design-vector-182076934.jpg');
+    }
+
+    /* Hover effect with colorful glow */
+    .logo:hover,
+    .logo1:hover {
+        transform: scale(1.1);
+        box-shadow:
+
+            0 0 50px #00b7ff,
+            /* Blue */
+            0 0 60px #8a00ff;
+        /* Purple */
+    }
+
+    h1 {
+
+        /* padding-left: 100px; */
+        font-size: 32px;
+        /* font-weight: 600;
+        margin-bottom: 10px;
+        animation: fadeIn 1.5s ease-in-out; */
+    }
+
+    .buttons {
+        display: flex;
+        gap: 15px;
+        color: black;
+    }
+
+    button {
+        background: rgba(255, 255, 255, 0.2);
+        border: none;
+        padding: 10px 15px;
+        border-radius: 10px;
+        color: white;
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
+    }
+
+    button:hover {
+        background: rgba(255, 255, 255, 0.4);
+        transform: scale(1.1);
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    footer {
+        bottom: 0;
+    }
+</style>
+
+<body>
+    <header>
+
+
+
+        <!-- <div> Nandan S</div> -->
+        <div class="logo"
+            onclick="document.querySelector('.info_box').classList.remove('activeInfo') = window.location.reload();">
+        </div>
+        <h1>The Brain Quiz Challenge 🎯</h1>
+        
+
+        <div class="buttons">
+            <button onclick="document.querySelector('.info_box').classList.add('activeInfo')">Start Quiz</button>
+            <button
+                onclick="document.querySelector('.info_box').classList.remove('activeInfo') = window.location.reload();">End
+                Quiz</button>
+
+        </div>
+        <div class="logo1" onclick="Nandan()"></div>
+        <!-- <button onclick="window.location.href='http://127.0.0.1:5500/Online%20Quiz%20Website/Quiz%20Application%20with%20Timer/nandan.html#contact';">
+            Contact Us
+        </button> -->
+    </header>
+
+
+
+    <!-- start Quiz button -->
+    <div class="start_btn">
+        <h1 style="margin: 20px; text-align: center; font-size: 40px; margin-bottom: 15px; color: #f9f9f9; animation: slideDown 1s ease-in-out;"
+            class="one">Welcome to the Quiz!</h1>
+        <p style="margin: 20px;  text-align: center; font-size: 15px; color: #fafafa; animation: fadeIn 2s ease-in-out;"
+            class="one">Test your knowledge and challenge yourself.</p>
+        <button style="  
+            margin: 20px; 
+            text-align: center; 
+            background: #5ba9fc; 
+            color: white; 
+            margin-left:165px; 
+            border: none; 
+            border-radius: 8px; 
+            font-size: 18px; 
+            cursor: pointer; 
+            transition: all 0.3s ease; 
+            animation: popUp 1.5s ease-in-out;"
+            onmouseover="this.style.background='red'; this.style.transform='scale(1.2)'; this.style.boxShadow='0 4px 15px rgba(0, 123, 255, 0.3)'; this.style.borderRadius='16px';"
+            onmouseout="this.style.background='#2c42f3'; this.style.transform='scale(1)'; this.style.boxShadow='none'; this.style.borderRadius='8px';">
+            Start Quiz
+        </button>
+
+
+
+
+
+        <!-- <button>Start Quiz</button> -->
+
+    </div>
+
+    <!-- Info Box -->
+    <div class="info_box">
+        <div class="info-title"><span>Some Rules of this Quiz</span></div>
+        <div class="info-list">
+            <div class="info">1. You will have only <span>15 seconds</span> per each question.</div>
+            <div class="info">2. Once you select your answer, it can't be undone.</div>
+            <div class="info">3. You can't select any option once time goes off.</div>
+            <div class="info">4. You can't exit from the Quiz while you're playing.</div>
+            <div class="info">5. You'll get points on the basis of your correct answers.</div>
+        </div>
+        <div class="buttons">
+            <button class="quit">Exit Quiz</button>
+            <button class="restart">Continue</button>
+            <br>
+        </div>
+    </div>
+
+    <!-- Quiz Box -->
+    <div class="quiz_box">
+        <header>
+            <div class="title">Awesome Quiz Application</div>
+            <div class="timer">
+                <div class="time_left_txt">Time Left</div>
+                <div class="timer_sec">15</div>
+            </div>
+            <div class="time_line"></div>
+        </header>
+        <section>
+            <div class="que_text">
+                <!-- Here I've inserted question from JavaScript -->
+            </div>
+            <div class="option_list">
+                <!-- Here I've inserted options from JavaScript -->
+            </div>
+        </section>
+
+        <!-- footer of Quiz Box -->
+        <footer>
+            <div class="total_que">
+                <!-- Here I've inserted Question Count Number from JavaScript -->
+            </div>
+            <button class="next_btn">Next Question</button>
+        </footer>
+    </div>
+
+    <!-- Result Box -->
+    <div class="result_box">
+        <div class="icon">
+            <i class="fas fa-crown"></i>
+        </div>
+        <div class="complete_text">You've completed the Quiz!</div>
+        <div class="score_text">
+            <!-- Here I've inserted Score Result from JavaScript -->
+        </div>
+        <div class="buttons">
+            <button class="restart">Replay Quiz</button>
+            <button class="quit">Quit Quiz</button>
+            <button class="restart" onclick="window.location.href='./nandan.html#contact';">
+                Contact Us
+            </button>
+        </div>
+    </div>
+
+    <!-- Inside this JavaScript file I've inserted Questions and Options only -->
+    <script src="js/questions.js"></script>
+
+    <!-- Inside this JavaScript file I've coded all Quiz Codes -->
+    <script src="js/script.js"></script>
+    <footer
+        style="position: fixed; bottom: 0; width: 100%; backdrop-filter: blur(15px); background: rgba(0, 0, 0, 0.8); color: white; text-align: center; backdrop-filter: blur(10px); display: flex; align-items: center; justify-content: center; height: 75px;">
+        
+            
+            <p style="margin: 0; font-size: 25px;">
+              © 2025 Nandan S. All rights reserved.   | 
+                <a href="./nandan.html#contact" 
+                   style="text-decoration: none; color: red; ">
+                   Contact Us
+                </a> 
+            </p>
+         
+            
+        <!-- <p style="margin: 0; font-size: 25px;">© 2025 Nandan S. All rights reserved.</p> -->
+
+    </footer>
+
+
+
+</body>
+
+
+</html>
